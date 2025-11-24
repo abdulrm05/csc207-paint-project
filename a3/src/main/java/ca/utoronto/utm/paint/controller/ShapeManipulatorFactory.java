@@ -7,6 +7,7 @@ public class ShapeManipulatorFactory {
             case "Circle" -> new CircleManipulatorStrategy(paintModel);
             case "Squiggle" -> new SquiggleManipulatorStrategy(paintModel);
             case "Rectangle" -> new RectangleManipulatorStrategy(paintModel);
+            case "Polyline" -> new PolylineManipulatorStrategy(paintModel);
             default -> null;
         };
         return strategy;
