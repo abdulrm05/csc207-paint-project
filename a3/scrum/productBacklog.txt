@@ -2,7 +2,7 @@
 # If a USER STORY is large, break it into smaller user stories.
 
 --------------------------------------------------------------------------
-TYPE     : BUG 3.0 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
+TYPE     : BUG 3.0 : UTORID : moha2819 STATUS : Complete
 NAME     : Configure and use system
 OWNER    : 
 PRIORITY : (1,2,3)
@@ -29,11 +29,11 @@ See squiggle for example. There is no mouse drag for polyline.
 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 3.2 : UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
+TYPE     : USER STORY 3.2 : UTORID : moha2819 STATUS : Complete
 NAME     : Save
 OWNER    :
 PRIORITY : 1
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :  
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :  2 hours
 AS A     : user
 ISSUE    : a user interface that allows me to specify where to save the
 Paint, then saves all Paint commands to a file.

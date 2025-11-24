@@ -15,11 +15,11 @@ ISSUE    :
 - demonstrates that they can run Paint on their dev platform
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 3.1 : UTORID : moha2819 STATUS : InProgress
+TYPE     : USER STORY 3.1 : UTORID : moha2819 STATUS : Complete
 NAME     : Polyline
 OWNER    :
 PRIORITY : 1
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL : 2 hours
 AS A     : user
 ISSUE    : A button which allows me to draw a polyline. Once selected,
 a left click on the canvas places the first polyline point.
