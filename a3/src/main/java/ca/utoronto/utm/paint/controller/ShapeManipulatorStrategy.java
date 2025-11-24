@@ -11,7 +11,7 @@ public class ShapeManipulatorStrategy implements  EventHandler<MouseEvent> {
 	ShapeManipulatorStrategy(PaintModel paintModel){
 		this.paintModel=paintModel;
 	}
-	
+
 	void addCommand(PaintCommand command){
 		this.paintModel.addCommand(command);
 	}
