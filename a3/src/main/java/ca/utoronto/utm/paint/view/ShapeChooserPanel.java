@@ -8,7 +8,7 @@ public class ShapeChooserPanel extends GridPane {
 	public ShapeChooserPanel(View view) {
         ShapeChooserPanelController controller = new ShapeChooserPanelController(view);
 
-		String[] buttonLabels = { "Circle", "Rectangle", "Squiggle" };
+		String[] buttonLabels = { "Circle", "Rectangle", "Squiggle", "Polyline" };
 
 		int row = 0;
 		for (String label : buttonLabels) {
