@@ -32,3 +32,20 @@ IMPL DTL : Implementation details for polyline
 See squiggle for example. There is no mouse drag for polyline.
 
 --------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3.2 : UTORID : moha2819 STATUS : InProgress
+NAME     : Save
+OWNER    :
+PRIORITY : 1
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :  2 hours
+AS A     : user
+ISSUE    : a user interface that allows me to specify where to save the
+Paint, then saves all Paint commands to a file.
+IMPL DTL : Implementation details for the save feature:
+
+This amounts to saving the command list to a file according
+to the Paint Save File Format.
+Do this using what you have learned in class about FileIO.
+You can find the format of the save file in the
+project under paintSaveFileFormat.txt.
+--------------------------------------------------------------------------
