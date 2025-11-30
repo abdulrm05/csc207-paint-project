@@ -11,7 +11,7 @@ import java.util.Observable;
 public class PolylineManipulatorStrategy extends ShapeManipulatorStrategy{
 
     private PolylineCommand polylineCommand;
-    private Point tempPreviewPoint;
+    private Point lastPoint;
 
     PolylineManipulatorStrategy(PaintModel model) {super(model);}
 
@@ -24,12 +24,14 @@ public class PolylineManipulatorStrategy extends ShapeManipulatorStrategy{
                 polylineCommand = new PolylineCommand();
                 this.addCommand(polylineCommand);
             }
-            polylineCommand.add(clickedPoint);}
+            polylineCommand.add(clickedPoint);
+            lastPoint = clickedPoint;
+        }
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        if (polylineCommand != null && !polylineCommand.getPoints().isEmpty()) {
+        if (polylineCommand != null && lastPoint != null) {
             polylineCommand.setPreviewPoint(new Point ((int) e.getX(), (int) e.getY()));
         }
     }
@@ -37,10 +39,13 @@ public class PolylineManipulatorStrategy extends ShapeManipulatorStrategy{
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getButton() == MouseButton.SECONDARY) {
-            if (polylineCommand != null) {
+            if (polylineCommand != null && lastPoint != null) {
+                Point finalPoint = new Point((int) e.getX(), (int) e.getY());
+                polylineCommand.add(finalPoint);
                 polylineCommand.setPreviewPoint(null);
             }
             polylineCommand = null;
+            lastPoint = null;
         }
     }
 
