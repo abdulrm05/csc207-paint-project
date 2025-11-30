@@ -4,6 +4,7 @@ import ca.utoronto.utm.paint.model.CircleCommand;
 import ca.utoronto.utm.paint.model.PaintModel;
 import ca.utoronto.utm.paint.model.RectangleCommand;
 import ca.utoronto.utm.paint.model.SquiggleCommand;
+import javafx.scene.paint.Color;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -35,8 +36,30 @@ public class PaintFileParser {
 
 	private Pattern pCircleStart=Pattern.compile("^Circle$");
 	private Pattern pCircleEnd=Pattern.compile("^EndCircle$");
-	// ADD MORE!!
-	
+    private Pattern pCenter = Pattern.compile("^center:\\((-?\\d+),(-?\\d+)\\)$");
+    private Pattern pRadius = Pattern.compile("^radius:(\\d+)$");
+
+    // Rectangle Patterns
+    private Pattern pRectangleStart = Pattern.compile("^Rectangle$");
+    private Pattern pRectangleEnd = Pattern.compile("^EndRectangle$");
+    private Pattern pP1 = Pattern.compile("^p1:\\((-?\\d+),(-?\\d+)\\)$");
+    private Pattern pP2 = Pattern.compile("^p2:\\((-?\\d+),(-?\\d+)\\)$");
+
+    // Squiggle Patterns
+    private Pattern pSquiggleStart = Pattern.compile("^Squiggle$");
+    private Pattern pSquiggleEnd = Pattern.compile("^EndSquiggle$");
+
+    // Polyline Patterns
+    private Pattern pPolylineStart  = Pattern.compile("^Polyline$");
+    private Pattern pPolylineEnd = Pattern.compile("^EndPolyline$");
+
+    // Patterns for all shapes
+    private Pattern pColor = Pattern.compile("^color:(\\d+),(\\d+),(\\d+)$");
+    private Pattern pFilled = Pattern.compile("^filled:(true|false)$");
+    private Pattern pPointStart = Pattern.compile("^points$");
+    private Pattern pPointEnd = Pattern.compile("^endpoints$");
+    private Pattern pPoint = Pattern.compile("^point:\\((-?\\d+),(-?\\d+)\\)$");
+
 	/**
 	 * Store an appropriate error message in this, including 
 	 * lineNumber where the error occurred.
@@ -180,4 +203,16 @@ public class PaintFileParser {
 		}
 		return true;
 	}
+
+    /**
+     * Parse the specified RGB integer to JavaFX color.
+     *
+     * @param r
+     * @param g
+     * @param b
+     * @return the associated javaFX color
+     */
+    private Color parseColor(int r, int g, int b) {
+        return Color.rgb(r, g, b);
+    }
 }
