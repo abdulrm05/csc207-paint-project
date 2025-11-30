@@ -33,7 +33,7 @@ See squiggle for example. There is no mouse drag for polyline.
 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 3.2 : UTORID : moha2819 STATUS : InProgress
+TYPE     : USER STORY 3.2 : UTORID : moha2819 STATUS : Complete
 NAME     : Save
 OWNER    :
 PRIORITY : 1
@@ -48,4 +48,25 @@ to the Paint Save File Format.
 Do this using what you have learned in class about FileIO.
 You can find the format of the save file in the
 project under paintSaveFileFormat.txt.
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3.3 : UTORID : moha2819 STATUS : InProgress
+NAME     : Load
+OWNER    :
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+ISSUE    : the ability to open previously saved Paint programs. A file dialog
+should appear, allowing me to choose the file to load. If the file is not in
+the correct format, provide an appropriate error message as an Alert.
+IMPL DTL : Implementation details for the load feature:
+
+Read a file in Paint Save File Format, being careful to parse
+each line using an appropriate regular expression/expressions.
+You can find the format of the save file in the
+project under paintSaveFileFormat.txt.
+
+The result of the execution of the load method should modify
+the given PaintModel. Some ShapeCommands will require careful parsing.
+For example, you will have to walk
+through a squiggle to properly parse it using Patterns and groups.
 --------------------------------------------------------------------------
