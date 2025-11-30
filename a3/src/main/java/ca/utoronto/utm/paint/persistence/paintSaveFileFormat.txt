@@ -51,7 +51,7 @@ simplest example, so this will also parse.
 
 PaintSave   File Version 1.0
 
-End Paint Sa  ve File
+End Paint Save File
 
 
 ------------------ END   EXAMPLE -----------------
@@ -93,7 +93,7 @@ Circle
 	filled:true
 	center:(123,58)
 	radius:11
-EndCircle
+End Circle
 ------------------ END   EXAMPLE -----------------
 
 The above describes a red filled in circle center (123,58)

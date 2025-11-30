@@ -24,4 +24,17 @@ public class SquiggleCommand extends PaintCommand {
 		}
 		
 	}
+
+    @Override
+    public String toString() {
+        String s = "Squiggle\n";
+        s += super.toString();
+        s += "\tpoints\n";
+
+        for (Point p : this.getPoints()){
+            s += "\t\tpoint:(" + p.x + "," + p.y + ")\n";
+        }
+        s += "\tend points\n";
+        return s + "End Squiggle";
+    }
 }

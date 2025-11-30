@@ -15,19 +15,15 @@ public class PaintFileSaver {
      */
     public static boolean save(PaintModel model, File file) {
         boolean retVal = true;
-        // TODO: Complete this
-        /**
-        try {
-
-
+        try (PrintWriter writer = new PrintWriter(file)) {
             String s = model.getPaintFileString();
             // then write it to the file
+            writer.write(s);
 
         } catch (FileNotFoundException e) {
             retVal = false;
             e.printStackTrace();
         }
-         **/
         return retVal;
     }
 }

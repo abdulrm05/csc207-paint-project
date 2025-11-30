@@ -39,4 +39,17 @@ public class PolylineCommand extends PaintCommand {
         }
 
     }
+
+    @Override
+    public String toString() {
+        String s = "Polyline\n";
+        s += super.toString();
+        s += "\tpoints\n";
+
+        for (Point p : points) {
+            s += "\t\tpoint:(" + p.x + "," + p.y + ")\n";
+        }
+        s += "\tend points\n";
+        return s + "End Polyline";
+    }
 }
