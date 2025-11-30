@@ -53,4 +53,14 @@ public class RectangleCommand extends PaintCommand {
 			g.strokeRect(topLeft.x, topLeft.y, dimensions.x, dimensions.y);
 		}
 	}
+
+    @Override
+    public String toString() {
+        String s = "Rectangle\n";
+        s += super.toString();
+        s += "\tp1:(" + this.getP1().x + "," + this.getP1().y + ")\n";
+        s += "\tp2:(" + this.getP2().x + "," + this.getP2().y + ")\n";
+        s += "End Rectangle";
+        return s;
+    }
 }

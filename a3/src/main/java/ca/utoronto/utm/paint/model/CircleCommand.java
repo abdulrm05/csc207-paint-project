@@ -33,4 +33,15 @@ public class CircleCommand extends PaintCommand {
 			g.strokeOval(x-radius, y-radius, 2*radius, 2*radius);
 		}
 	}
+
+    @Override
+    public String toString() {
+        String s = "Circle\n";
+        s += super.toString();
+        s += "\tcenter:(" + this.getCentre().x + "," + this.getCentre().y + ")\n";
+        s += "\tradius:" + this.radius + "\n";
+        s += "End Circle";
+        return s;
+
+    }
 }
