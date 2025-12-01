@@ -21,18 +21,18 @@ import java.util.regex.Pattern;
  *
  */
 public class PaintFileParser {
-	private int lineNumber = 0; // the current line being parsed
-	private String errorMessage =""; // error encountered during parse
-	private PaintModel paintModel;
-	private boolean isParsed=false; // whether the parse succeeded
-	/**
-	 * Below are Patterns used in parsing 
-	 */
-	private Pattern pFileStart=Pattern.compile("^PaintSaveFileVersion1.0$");
-	private Pattern pFileEnd=Pattern.compile("^EndPaintSaveFile$");
+    private int lineNumber = 0; // the current line being parsed
+    private String errorMessage = ""; // error encountered during parse
+    private PaintModel paintModel;
+    private boolean isParsed = false; // whether the parse succeeded
+    /**
+     * Below are Patterns used in parsing
+     */
+    private Pattern pFileStart = Pattern.compile("^PaintSaveFileVersion1.0$");
+    private Pattern pFileEnd = Pattern.compile("^EndPaintSaveFile$");
 
-	private Pattern pCircleStart=Pattern.compile("^Circle$");
-	private Pattern pCircleEnd=Pattern.compile("^EndCircle$");
+    private Pattern pCircleStart = Pattern.compile("^Circle$");
+    private Pattern pCircleEnd = Pattern.compile("^EndCircle$");
     private Pattern pCenter = Pattern.compile("^center:\\((-?\\d+),(-?\\d+)\\)$");
     private Pattern pRadius = Pattern.compile("^radius:(\\d+)$");
 
@@ -47,7 +47,7 @@ public class PaintFileParser {
     private Pattern pSquiggleEnd = Pattern.compile("^EndSquiggle$");
 
     // Polyline Patterns
-    private Pattern pPolylineStart  = Pattern.compile("^Polyline$");
+    private Pattern pPolylineStart = Pattern.compile("^Polyline$");
     private Pattern pPolylineEnd = Pattern.compile("^EndPolyline$");
 
     // Patterns for all shapes
@@ -57,86 +57,96 @@ public class PaintFileParser {
     private Pattern pPointEnd = Pattern.compile("^endpoints$");
     private Pattern pPoint = Pattern.compile("^point:\\((-?\\d+),(-?\\d+)\\)$");
 
-	/**
-	 * Store an appropriate error message in this, including 
-	 * lineNumber where the error occurred.
-	 * @param mesg
-	 */
-	private void error(String mesg){
-		this.errorMessage = "Error in line "+lineNumber+" "+mesg;
-	}
-	
-	/**
-	 * 
-	 * @return the error message resulting from an unsuccessful parse
-	 */
-	public String getErrorMessage(){
-		return this.errorMessage;
-	}
+    /**
+     * Store an appropriate error message in this, including
+     * lineNumber where the error occurred.
+     *
+     * @param mesg
+     */
+    private void error(String mesg) {
+        this.errorMessage = "Error in line " + lineNumber + " " + mesg;
+    }
+
+    /**
+     *
+     * @return the error message resulting from an unsuccessful parse
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
 
     /**
      * @return the PaintModel associated with parsing the file
      */
-    public PaintModel getPaintModel() { return this.paintModel; }
+    public PaintModel getPaintModel() {
+        return this.paintModel;
+    }
 
     /**
      * @return whether the file parsed successfully
      */
-    public boolean isParsed(){
+    public boolean isParsed() {
         return this.isParsed;
     }
 
     /**
-	 * Parse the specified file
-	 * @param fileName
-	 * @return
-	 */
-	public boolean parse(String fileName){
-		boolean retVal = false;
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader(fileName));
-			PaintModel pm = new PaintModel();
-			retVal = this.parse(br, pm);
-		} catch (FileNotFoundException e) {
-			error("File Not Found: "+fileName);
-		} finally {
-			try { br.close(); } catch (Exception e){};
-		}
+     * Parse the specified file
+     *
+     * @param fileName
+     * @return
+     */
+    public boolean parse(String fileName) {
+        boolean retVal = false;
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(fileName));
+            PaintModel pm = new PaintModel();
+            retVal = this.parse(br, pm);
+        } catch (FileNotFoundException e) {
+            error("File Not Found: " + fileName);
+        } finally {
+            try {
+                br.close();
+            } catch (Exception e) {
+            }
+            ;
+        }
         this.isParsed = retVal;
-		return retVal;
-	}
+        return retVal;
+    }
 
 
-	/**
-	 * Parse the inputStream as a Paint Save File Format file.
-	 * The result of the parse is stored as an ArrayList of Paint command.
-	 * If the parse was not successful, this.errorMessage is appropriately
-	 * set, with a useful error message.
-	 * 
-	 * @param inputStream the open file to parse
-	 * @param paintModel the paint model to add the commands to
-	 * @return whether the complete file was successfully parsed
-	 */
-	public boolean parse(BufferedReader inputStream, PaintModel paintModel) {
-		this.paintModel = paintModel;
-		this.errorMessage="";
-		
-		// During the parse, we will be building one of the 
-		// following commands. As we parse the file, we modify 
-		// the appropriate command.
-		
-		CircleCommand circleCommand = null;
-		RectangleCommand rectangleCommand = null;
-		SquiggleCommand squiggleCommand = null;
+    /**
+     * Parse the inputStream as a Paint Save File Format file.
+     * The result of the parse is stored as an ArrayList of Paint command.
+     * If the parse was not successful, this.errorMessage is appropriately
+     * set, with a useful error message.
+     *
+     * @param inputStream the open file to parse
+     * @param paintModel  the paint model to add the commands to
+     * @return whether the complete file was successfully parsed
+     */
+    public boolean parse(BufferedReader inputStream, PaintModel paintModel) {
+        this.paintModel = paintModel;
+        this.errorMessage = "";
+
+        // During the parse, we will be building one of the
+        // following commands. As we parse the file, we modify
+        // the appropriate command.
+
+        CircleCommand circleCommand = null;
+        RectangleCommand rectangleCommand = null;
+        SquiggleCommand squiggleCommand = null;
         PolylineCommand polylineCommand = null;
-	
-		try {	
-			int state=0; Matcher m; String l;
-			
-			this.lineNumber=0;
-			while ((l = inputStream.readLine()) != null) {
-				this.lineNumber++;
+
+        try {
+            int state = 0;
+            Matcher m;
+            String l;
+
+            this.lineNumber = 0;
+            while ((l = inputStream.readLine()) != null) {
+                this.lineNumber++;
                 // remove whitespace
                 l = l.replaceAll("\\s+", "");
 
@@ -450,7 +460,7 @@ public class PaintFileParser {
                             return false;
                     }
                 }
-			}
+            }
 
             // check if we ended in correct state
             if (state != 100) {
@@ -458,22 +468,10 @@ public class PaintFileParser {
                 return false;
             }
 
-		}  catch (Exception e){
-			error("Error reading file: " + e.getMessage());
+        } catch (Exception e) {
+            error("Error reading file: " + e.getMessage());
             return false;
-		}
-		return true;
-	}
-
-    /**
-     * Parse the specified RGB integer to JavaFX color.
-     *
-     * @param r
-     * @param g
-     * @param b
-     * @return the associated javaFX color
-     */
-    private Color parseColor(int r, int g, int b) {
-        return Color.rgb(r, g, b);
+        }
+        return true;
     }
 }
