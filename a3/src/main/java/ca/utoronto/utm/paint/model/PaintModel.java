@@ -17,11 +17,11 @@ public class PaintModel extends Observable implements Observer {
 	
 	private final ArrayList<PaintCommand> commands = new ArrayList<PaintCommand>();
 
-	public void executeAll(GraphicsContext g) {
-		for(PaintCommand c: this.commands){
-			c.execute(g);
-		}
-	}
+	public void accept(PaintCommandVisitor visitor){
+        for (PaintCommand command : commands){
+            command.accept(visitor);
+        }
+    }
 	
 	/**
 	 * We Observe our model components, the PaintCommands
