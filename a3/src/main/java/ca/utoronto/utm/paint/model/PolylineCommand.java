@@ -20,6 +20,8 @@ public class PolylineCommand extends PaintCommand {
         this.notifyObservers();
     }
 
+    public Point getPreviewPoint() {return this.previewPoint;}
+
     public ArrayList<Point> getPoints() {return this.points;}
 
     @Override

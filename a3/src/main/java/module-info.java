@@ -4,6 +4,7 @@ module ca.utoronto.utm.paint {
     requires org.json;
     requires javafx.base;
     requires javafx.graphics;
+    requires ca.utoronto.utm.paint;
 
 
     opens ca.utoronto.utm.paint to javafx.fxml;
