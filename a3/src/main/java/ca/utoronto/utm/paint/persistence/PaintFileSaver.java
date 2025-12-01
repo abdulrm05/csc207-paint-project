@@ -16,9 +16,16 @@ public class PaintFileSaver {
     public static boolean save(PaintModel model, File file) {
         boolean retVal = true;
         try (PrintWriter writer = new PrintWriter(file)) {
-            String s = model.getPaintFileString();
-            // then write it to the file
+            // create SaveVisitor for model to accept
+            SaveVisitor saveVisitor = new SaveVisitor();
+            model.accept(saveVisitor);
+
+            // Build complete string
+            String s = "Paint Save File Version 1.0\n";
+            s += saveVisitor.getSaveString();
+            s += "End Paint Save File";
             writer.write(s);
+            retVal = true;
 
         } catch (FileNotFoundException e) {
             retVal = false;

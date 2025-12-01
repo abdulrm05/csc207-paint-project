@@ -31,17 +31,4 @@ public class PaintModel extends Observable implements Observer {
 		this.setChanged();
 		this.notifyObservers();
 	}
-
-    /**
-     * @return the PaintFileFormat String for this model
-     */
-    public String getPaintFileString(){
-        String s = "";
-        s+="Paint Save File Version 1.0\n";
-        for (PaintCommand c: this.commands){
-            s += c.toString()+"\n";
-        }
-        s+="End Paint Save File";
-        return s;
-    }
 }

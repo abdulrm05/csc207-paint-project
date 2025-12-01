@@ -45,15 +45,4 @@ public class RectangleCommand extends PaintCommand {
 	public void accept(PaintCommandVisitor visitor) {
         visitor.visit(this);
     }
-
-
-    @Override
-    public String toString() {
-        String s = "Rectangle\n";
-        s += super.toString();
-        s += "\tp1:(" + this.getP1().x + "," + this.getP1().y + ")\n";
-        s += "\tp2:(" + this.getP2().x + "," + this.getP2().y + ")\n";
-        s += "End Rectangle";
-        return s;
-    }
 }

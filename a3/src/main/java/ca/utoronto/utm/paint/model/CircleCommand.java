@@ -26,15 +26,4 @@ public class CircleCommand extends PaintCommand {
     public void accept(PaintCommandVisitor visitor) {
         visitor.visit(this);
     }
-
-    @Override
-    public String toString() {
-        String s = "Circle\n";
-        s += super.toString();
-        s += "\tcenter:(" + this.getCentre().x + "," + this.getCentre().y + ")\n";
-        s += "\tradius:" + this.radius + "\n";
-        s += "End Circle";
-        return s;
-
-    }
 }

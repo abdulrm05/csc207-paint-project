@@ -68,4 +68,6 @@ public class DrawVisitor implements PaintCommandVisitor {
             g.strokeLine(lastPoint.x, lastPoint.y, previewPoint.x, previewPoint.y);
         }
     }
+
+    public String getSaveString() {return "";}
 }

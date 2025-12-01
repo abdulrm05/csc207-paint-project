@@ -28,16 +28,6 @@ public abstract class PaintCommand extends Observable {
 	public void setFill(boolean fill) {
 		this.fill = fill;
 	}
-	public String toString(){
-		int r = (int) (this.color.getRed() * 255);
-		int g = (int) (this.color.getGreen() * 255);
-		int b = (int) (this.color.getBlue() * 255);
 
-		String s = "";
-		s+="\tcolor:"+r+","+g+","+b+"\n";
-		s+="\tfilled:"+this.fill+"\n";
-		return s;
-	}
-	
 	public abstract void accept(PaintCommandVisitor visitor);
 }

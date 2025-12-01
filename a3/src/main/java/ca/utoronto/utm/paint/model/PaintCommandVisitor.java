@@ -5,4 +5,5 @@ public interface PaintCommandVisitor {
     void visit(RectangleCommand rectangle);
     void visit(SquiggleCommand squiggle);
     void visit(PolylineCommand polyline);
+    String getSaveString();
 }
