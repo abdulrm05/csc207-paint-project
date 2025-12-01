@@ -39,5 +39,5 @@ public abstract class PaintCommand extends Observable {
 		return s;
 	}
 	
-	public abstract void execute(GraphicsContext g);
+	public abstract void accept(PaintCommandVisitor visitor);
 }
