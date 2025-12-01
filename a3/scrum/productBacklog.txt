@@ -46,11 +46,11 @@ You can find the format of the save file in the
 project under paintSaveFileFormat.txt.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY 3.3 : UTORID : moha2819 STATUS : InProgress
+TYPE     : USER STORY 3.3 : UTORID : moha2819 STATUS : Complete
 NAME     : Load
 OWNER    :
 PRIORITY : 2
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :  
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL : 1 hour
 AS A     : user
 ISSUE    : the ability to open previously saved Paint programs. A file dialog
 should appear, allowing me to choose the file to load. If the file is not in
@@ -68,7 +68,7 @@ For example, you will have to walk
 through a squiggle to properly parse it using Patterns and groups.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 3.4: UTORID : STATUS : NotStarted (NotStarted,InProgress, Incomplete,Complete)
+TYPE     : BUG 3.4: UTORID : moha2819 STATUS : InProgress
 NAME     : Visitor1: Improve architecture for drawing
 OWNER    :
 PRIORITY : 3
