@@ -2,97 +2,97 @@
 # Group Member: FILL THIS IN
 
 Nov 17, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Nothing
+	Obstacles : Nothing
 
 Nov 18, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Review A3 Starter code
+	Obstacles : Nothing
 
 Nov 19, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Reviewed A3 starter code
+	Today     : Nothing
+	Obstacles : Nothing
 
 Nov 20, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Start with BUG3.0
+	Obstacles : Nothing
 
 Nov 21, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started and finished BUG3.0
+	Today     : Nothing
+	Obstacles : Nothing
 
 Nov 22, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Start US3.1
+	Obstacles : Altering PolylineManipultorStrategy methods from ShapeManipulator
 	
 Nov 23, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started Us3.1
+	Today     : Continue US3.1
+	Obstacles : Handling right-clicks vs. left-clicks
 
 Nov 24, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Worked on US3.1
+	Today     : Continue and finish US3.1
+	Obstacles : Nothing
 
 Nov 25, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished US3.1
+	Today     : Start US3.2
+	Obstacles : Nothing
 
 Nov 26, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started US3.2
+	Today     : Continue and finish US3.2
+	Obstacles : Formatting issues with each shape
 	
 Nov 27, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished US3.2
+	Today     : Start US3.3
+	Obstacles : Coming up with parse cases
 	
 Nov 28, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started US3.3
+	Today     : Continue and complete US3.3
+	Obstacles : Handling empty files
 	
 Nov 29, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Finished US3.3
+	Today     : Start BUG3.4
+	Obstacles : Dealing with the draw properties of each shape in DrawVisitor
 
 Nov 30, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Started and Completed BUG3.4
+	Today     : Start and complete BUG3.5
+	Obstacles : Copying over the similar string building formats
 
 Dec 1, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Submitted Assignment 3
+	Today     : Nothing
+	Obstacles : Nothing
 	
 Dec 2, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Nothing
+	Obstacles : Nothing
 
 Dec 3, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Nothing
+	Obstacles : Nothing
 
 Dec 4, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Nothing
+	Obstacles : Nothing
 	
 Dec 5, 2024
-	Yesterday :
-	Today     :
-	Obstacles :
+	Yesterday : Nothing
+	Today     : Nothing
+	Obstacles : Nothing
 
