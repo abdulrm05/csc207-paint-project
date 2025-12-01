@@ -31,7 +31,9 @@ public class PaintPanel extends StackPane implements Observer {
 	public void repaint() {
 		GraphicsContext g = this.canvas.getGraphicsContext2D();
 		g.clearRect(0, 0, this.getWidth(), this.getHeight());
-		this.model.executeAll(g);
+
+        DrawVisitor drawVisitor = new DrawVisitor(g);
+        this.model.accept(drawVisitor);
 	}
 
 	@Override
