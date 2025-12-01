@@ -85,11 +85,11 @@ visit the PaintModel and render the screen using
 a graphics context. Some Model methods may be removed after this.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG 3.5: UTORID : moha2819 STATUS : InProgress
+TYPE     : BUG 3.5: UTORID : moha2819 STATUS : Complete
 NAME     : Visitor2: Improve architecture for save
 OWNER    :
 PRIORITY : 4
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :  
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL : 1 hour
 AS A     : 
 ISSUE    :
 DEPENDSON: USER STORY 3.2 and USER STORY 3.4

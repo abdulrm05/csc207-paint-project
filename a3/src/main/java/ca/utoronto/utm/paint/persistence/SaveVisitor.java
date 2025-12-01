@@ -11,8 +11,8 @@ public class SaveVisitor implements PaintCommandVisitor {
         String s = "Circle\n";
         s += sharedProperties(circle);
         s += "\tcenter:(" + circle.getCentre().x + "," + circle.getCentre().y + ")\n";
-        s += "\tradius:(" + circle.getRadius() + ")\n";
-        s += "End Circle \n\n";
+        s += "\tradius:" + circle.getRadius() + "\n";
+        s += "End Circle \n";
         saveString += s;
     }
 
@@ -22,7 +22,7 @@ public class SaveVisitor implements PaintCommandVisitor {
         s += sharedProperties(rectangle);
         s += "\tp1:(" + rectangle.getP1().x + "," + rectangle.getP1().y + ")\n";
         s += "\tp2:(" + rectangle.getP2().x + "," + rectangle.getP2().y + ")\n";
-        s += "End Rectangle \n\n";
+        s += "End Rectangle \n";
         saveString += s;
     }
 
@@ -36,7 +36,7 @@ public class SaveVisitor implements PaintCommandVisitor {
             s += "\t\tpoint:(" + p.x + "," + p.y + ")\n";
         }
         s += "\tend points\n";
-        s += "End Squiggle\n\n";
+        s += "End Squiggle\n";
         saveString += s;
     }
 
@@ -50,7 +50,7 @@ public class SaveVisitor implements PaintCommandVisitor {
             s += "\t\tpoint:(" + p.x + "," + p.y + ")\n";
         }
         s += "\tend points\n";
-        s += "End Polyline\n\n";
+        s += "End Polyline\n";
         saveString += s;
     }
 
