@@ -1,7 +1,9 @@
-Paint Application - JavaFX MVC with Design Patterns (CSC207)
-A fully-featured paint/drawing application built with Java and JavaFX, for CSc207 at the University of Toronto Mississauga, following the Model-View-Controller (MVC) architecture with multiple design patterns.
+# 🖌️ Paint Application (CSC207)
+A fully-featured paint/drawing application built with Java and JavaFX, for CSC207 at the University of Toronto Mississauga, following the Model-View-Controller (MVC) architecture with multiple design patterns.
 
-🎨 Features
+---
+
+## ✨ Features
 Shape Drawing: Circle, Rectangle, Squiggle (freehand), and Polyline
 
 File Operations: Save and load drawings in custom Paint Save File Format
@@ -10,7 +12,9 @@ Real-time Preview: Visual feedback while drawing shapes
 
 Multiple Colors & Fill: Random colors with fill/unfill options
 
-🏗️ Architecture
+---
+
+## 🏗️ Architecture
 MVC Pattern: Clean separation of Model, View, and Controller components
 
 Visitor Pattern: Drawing and serialization logic separated from data models
@@ -21,7 +25,9 @@ Observer Pattern: Automatic UI updates when model changes
 
 Command Pattern: Each shape represented as a command object
 
-🧩 Design Patterns Implemented
+---
+
+## 🧩 Design Patterns Implemented
 Model-View-Controller (MVC) - Core application structure
 
 Visitor Pattern - For drawing and file serialization
@@ -34,7 +40,9 @@ Command Pattern - Representing drawable shapes
 
 Factory Pattern - Creating shape strategies
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
 text
 src/
 ├── model/          # Data models and commands
@@ -43,7 +51,9 @@ src/
 ├── persistence/    # File I/O and parsing
 └── [tests]/        # Unit tests
 
-🚀 Getting Started
+---
+
+## 🚀 Getting Started
 Prerequisites: Java 11+, JavaFX
 
 Build: mvn clean compile
@@ -52,7 +62,10 @@ Run: mvn javafx:run
 
 Test: mvn test
 
-📋 Requirements Implemented
+---
+
+## 📋 Requirements Implemented
+
 ✅ User Story 3.1: Polyline drawing with right-click completion
 
 ✅ User Story 3.2: Save drawings to file format
@@ -63,7 +76,9 @@ Test: mvn test
 
 ✅ Bug 3.5: Visitor pattern for saving (separate model from persistence)
 
-🧪 Testing
+---
+
+## 🧪 Testing
 Comprehensive test suite including:
 
 File parsing tests (whitespace normalization, error handling)
@@ -74,16 +89,22 @@ Save/load integration tests
 
 Visitor pattern implementation tests
 
-📸 Screenshots
+---
+
+## 📸 Screenshots
 
 Here are examples of the paint UI:
 
+
 <img width="892" height="837" alt="image" src="https://github.com/user-attachments/assets/d13975d7-ec62-4c94-838a-75e7bc8cffe9" />
+
 
 <img width="895" height="817" alt="image" src="https://github.com/user-attachments/assets/c737a3ee-fdbf-43f7-8add-97c73bbeae9b" />
 
 
-🛠️ Technical Highlights
+---
+
+## 🛠️ Technical Highlights
 Custom file format parser with finite state machine
 
 Regular expression-based file parsing
@@ -94,8 +115,8 @@ Observer-based real-time UI updates
 
 Extensible architecture for adding new shapes
 
-Course: University of Toronto Mississauga - CSC207
-Focus: Software design patterns, clean architecture, and object-oriented design principles
+## Course: University of Toronto Mississauga - CSC207
+## Focus: Software design patterns, clean architecture, and object-oriented design principles
 
 
 
