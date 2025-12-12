@@ -105,18 +105,24 @@ Here are examples of the paint UI:
 ---
 
 ## 🛠️ Technical Highlights
-Custom file format parser with finite state machine
+  - Custom file format parser with finite state machine
 
-Regular expression-based file parsing
+  - Regular expression-based file parsing
 
-Proper error handling with user-friendly alerts
+  - Proper error handling with user-friendly alerts
 
-Observer-based real-time UI updates
+  - Observer-based real-time UI updates
 
-Extensible architecture for adding new shapes
+  - Extensible architecture for adding new shapes
 
-## Course: University of Toronto Mississauga - CSC207
-## Focus: Software design patterns, clean architecture, and object-oriented design principles
+---
 
+## 👤 Author
+
+**Abdul Mohammed**  
+University of Toronto Mississauga  
+CSC207 Software Design
+
+---
 
 
