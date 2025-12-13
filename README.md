@@ -1,5 +1,6 @@
 # 🖌️ Paint Application (CSC207)
-A fully-featured paint/drawing application built with Java and JavaFX, for CSC207 at the University of Toronto Mississauga, following the Model-View-Controller (MVC) architecture with multiple design patterns.
+A fully-featured paint/drawing application built with Java and JavaFX, for CSC207 at the University of Toronto Mississauga with Prof. Arnold Rosenbloom. 
+This project follows a series of design patterns around the Model-View-Controller (MVC).
 
 ---
 
